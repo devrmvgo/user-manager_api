@@ -1,11 +1,10 @@
 const express = require('express')
 const app = express()
 
-const port = 3000
+//Routes
+app.use('/', require('./src/routes'));
 
-app.get('/', (req, res) => {
-  res.send('welcome to api for management users')
-})
+const port = 3000
 
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`)
