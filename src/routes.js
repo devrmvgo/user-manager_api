@@ -1,8 +1,8 @@
 const express = require('express');
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
-  res.send('welcome to api for management users')
-})
+const UserController = require('./controllers/UserController');
+
+routes.get('/', UserController.index)
 
 module.exports = routes;
